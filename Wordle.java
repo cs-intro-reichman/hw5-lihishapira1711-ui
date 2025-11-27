@@ -5,20 +5,14 @@ public class Wordle {
     // Reads all words from dictionary filename into a String array.
     public static String[] readDictionary(String filename) {
 		return new In(filename).readAllStrings();
-      /*  String[] tokens = WHITESPACE_PATTERN.split(readAll());
-        if (tokens.length == 0 || tokens[0].length() > 0)
-            return tokens;
-        String[] decapitokens = new String[tokens.length-1];
-        for (int i = 0; i < tokens.length-1; i++)
-            decapitokens[i] = tokens[i+1];
-        return decapitokens */
+      
     }
 
     // Choose a random secret word from the dictionary. 
     // Hint: Pick a random index between 0 and dict.length (not including) using Math.random()
     public static String chooseSecretWord(String[] dict) {
-         int rnd = (int)Math.random()*(dict.length-1);
-         return dict [rnd];
+         int rnd = (int)(Math.random()*(dict.length-1));
+         return dict[rnd];
 		
     }
 
